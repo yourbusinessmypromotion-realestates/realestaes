@@ -1,8 +1,6 @@
 /**
  * SHREE DHARANI ESTATES - APPLICATION LOGIC
- * Dynamic Property Catalog, Filtering, Modal Gallery, WhatsApp Lead Redirectiongit add .
-git commit -m "Your commit message here"
-git push
+ * Dynamic Property Catalog, Filtering, Modal Gallery, WhatsApp Lead Redirection
  */
 
 // Comprehensive Property Dataset
@@ -313,35 +311,48 @@ function setupEventListeners() {
     });
   });
 
-  // Hero Search Form
+  // Hero Search Form & Button
   const searchForm = document.getElementById("heroSearchForm");
+  const searchBtn = document.getElementById("btnSearchFilter");
+
+  const executeSearch = () => {
+    const typeSelect = document.getElementById("searchType");
+    const locationSelect = document.getElementById("searchLocation");
+    const priceSelect = document.getElementById("searchPrice");
+
+    if (typeSelect) currentFilterCategory = typeSelect.value;
+    if (locationSelect) currentFilterLocation = locationSelect.value;
+    if (priceSelect) currentFilterPrice = priceSelect.value;
+
+    // sync tabs UI
+    tabs.forEach(t => {
+      if (t.getAttribute("data-category") === currentFilterCategory) {
+        t.classList.add("active");
+      } else {
+        t.classList.remove("active");
+      }
+    });
+
+    renderProperties();
+
+    // Smooth scroll to listings
+    const listingsEl = document.getElementById("listings");
+    if (listingsEl) {
+      listingsEl.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   if (searchForm) {
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const typeSelect = document.getElementById("searchType");
-      const locationSelect = document.getElementById("searchLocation");
-      const priceSelect = document.getElementById("searchPrice");
+      executeSearch();
+    });
+  }
 
-      if (typeSelect) currentFilterCategory = typeSelect.value;
-      if (locationSelect) currentFilterLocation = locationSelect.value;
-      if (priceSelect) currentFilterPrice = priceSelect.value;
-
-      // sync tabs UI
-      tabs.forEach(t => {
-        if (t.getAttribute("data-category") === currentFilterCategory) {
-          t.classList.add("active");
-        } else {
-          t.classList.remove("active");
-        }
-      });
-
-      renderProperties();
-
-      // Smooth scroll to listings
-      const listingsEl = document.getElementById("listings");
-      if (listingsEl) {
-        listingsEl.scrollIntoView({ behavior: "smooth" });
-      }
+  if (searchBtn) {
+    searchBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      executeSearch();
     });
   }
 

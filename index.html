@@ -1,22 +1,542 @@
-<div class="popup-title">
-            <strong>Shree Dharani Support</strong>
-            <span class="status-indicator"><span class="online-dot"></span> Online Now</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Dharani Estates | Premium Real Estate, Open Plots & Luxury Living</title>
+  <meta name="description" content="Discover premium open plots, luxury gated community villas, and high-growth commercial properties in Visakhapatnam, Vijayawada, and Hyderabad with 100% clear titles.">
+  
+  <!-- Google Fonts: Playfair Display for luxury serif headings, Plus Jakarta Sans for modern UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. UNDER DEVELOPMENT BANNER
+       ========================================================================= -->
+  <aside class="dev-banner" id="devBanner">
+    <div class="dev-banner-content">
+      <div class="dev-banner-left">
+        <span class="dev-badge">
+          <span class="pulse-dot"></span> Live Prototype
+        </span>
+        <p class="dev-banner-text">
+          Portal preview under active enhancement for <strong>Shree Dharani Estates</strong>.
+        </p>
+      </div>
+      <div class="dev-banner-right">
+        <a href="#listings" class="dev-banner-cta">Explore Properties</a>
+        <button class="dev-close-btn" id="bannerCloseBtn" aria-label="Dismiss banner">&times;</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. LUXURY NAVBAR
+       ========================================================================= -->
+  <header class="main-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" id="headerLogo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-main-title">Shree Dharani</span>
+          <span class="logo-sub-title">Estates &bull; Luxury Living</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#listings" class="nav-link">Featured Properties</a></li>
+          <li><a href="#whyUs" class="nav-link">Why Choose Us</a></li>
+          <li><a href="#spotlight" class="nav-link">Prime Corridors</a></li>
+          <li><a href="#inquirySection" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="tel:+919959427831" class="nav-phone-link" aria-label="Call Shree Dharani Estates">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <span>+91 99594 27831</span>
+        </a>
+        <a href="#inquirySection" class="btn-luxury">Schedule Visit</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Navigation Menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         3. HERO SECTION WITH VIDEO/IMAGE & SMART SEARCH
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" alt="Luxury Architectural Home by Shree Dharani Estates">
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <span class="hero-pretitle">✦ Andhra Pradesh & Telangana's Trusted Developer ✦</span>
+        <h1 class="hero-title">
+          Build Your Future on <span>Solid Ground</span>
+        </h1>
+        <p class="hero-subtitle">
+          Approved residential plots, bespoke gated community villas, and prime high-appreciation land developments across Visakhapatnam, Vijayawada, and Hyderabad.
+        </p>
+
+        <!-- Interactive Search & Filter Card -->
+        <div class="search-filter-card" id="searchFilterCard">
+          <div class="search-filter-grid">
+            <!-- Property Category Filter -->
+            <div class="filter-group">
+              <label for="searchType">Property Type</label>
+              <div class="filter-select-wrapper">
+                <svg class="filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <select id="searchType" class="filter-select">
+                  <option value="all">All Property Types</option>
+                  <option value="plots">Open Plots / Layouts</option>
+                  <option value="villas">Luxury Villas</option>
+                  <option value="apartments">Executive Apartments</option>
+                  <option value="commercial">Commercial Hubs</option>
+                </select>
+                <span class="filter-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Location Filter -->
+            <div class="filter-group">
+              <label for="searchLocation">Prime Location</label>
+              <div class="filter-select-wrapper">
+                <svg class="filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <select id="searchLocation" class="filter-select">
+                  <option value="all">All Prime Cities</option>
+                  <option value="visakhapatnam">Visakhapatnam (Vizag)</option>
+                  <option value="vijayawada">Vijayawada</option>
+                  <option value="hyderabad">Hyderabad</option>
+                </select>
+                <span class="filter-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Budget Filter -->
+            <div class="filter-group">
+              <label for="searchPrice">Budget Range</label>
+              <div class="filter-select-wrapper">
+                <svg class="filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <select id="searchPrice" class="filter-select">
+                  <option value="all">Any Investment Budget</option>
+                  <option value="under-30">Under ₹30 Lakhs</option>
+                  <option value="30-70">₹30 Lakhs - ₹70 Lakhs</option>
+                  <option value="70-150">₹70 Lakhs - ₹1.5 Crore</option>
+                  <option value="above-150">₹1.5 Crore & Above</option>
+                </select>
+                <span class="filter-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Submit Filter Button -->
+            <button id="btnSearchFilter" class="search-submit-btn" aria-label="Find Matching Properties">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+              <span>Search</span>
+            </button>
           </div>
         </div>
-        <button class="popup-close-btn" id="popupCloseBtn" aria-label="Close chat window">✕</button>
+
+        <!-- Quick Stats Strip -->
+        <div class="quick-stats-row">
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Years of Trust</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1,200+</span>
+            <span class="stat-label">Happy Families</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Clear Titles & RERA</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">300+</span>
+            <span class="stat-label">Acres Developed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. TRUST BADGES / KEY VALUE PILLARS
+         ========================================================================= -->
+    <section class="trust-section" id="whyUs">
+      <div class="container">
+        <div class="features-grid">
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div class="trust-content">
+              <h3>100% Legal Clearance</h3>
+              <p>Every venture comes with verified approvals from VMRDA, CRDA, HMDA, or RERA with clear spot registration.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <div class="trust-content">
+              <h3>High Capital Appreciation</h3>
+              <p>Strategically situated on growth corridors, IT corridors, and upcoming airport belts for maximum return on investment.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div class="trust-content">
+              <h3>World-Class Amenities</h3>
+              <p>Underground cabling, wide blacktop/CC roads, water drainage systems, solar lighting, and compound walls.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+            </div>
+            <div class="trust-content">
+              <h3>Pre-Approved Bank Loans</h3>
+              <p>Hassle-free loan sanctions from SBI, HDFC, ICICI, and leading nationalized banks up to 75% valuation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. PROPERTY LISTINGS SECTION
+         ========================================================================= -->
+    <section class="listings-section" id="listings">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Handcrafted Portfolios</span>
+          <h2 class="section-title">Featured Ventures & Projects</h2>
+          <p class="section-desc">Browse our collection of verified open plots, designer residences, and premier commercial spaces.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-category="all">All Properties</button>
+          <button class="tab-btn" data-category="plots">Open Plots</button>
+          <button class="tab-btn" data-category="villas">Luxury Villas</button>
+          <button class="tab-btn" data-category="apartments">Apartments</button>
+          <button class="tab-btn" data-category="commercial">Commercial Hubs</button>
+        </div>
+
+        <!-- Properties Dynamic Grid Container (Populated by app.js) -->
+        <div class="properties-grid" id="propertiesGrid">
+          <!-- Rendered via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PRIME CORRIDOR SPOTLIGHT BANNER
+         ========================================================================= -->
+    <section class="spotlight-section" id="spotlight">
+      <div class="container spotlight-container">
+        <div class="spotlight-content">
+          <span class="section-tag" style="background: rgba(212,175,55,0.2); color: var(--gold-light);">Prime Growth Opportunity</span>
+          <h2>Bhogapuram Airport & IT Corridor Investment Wave</h2>
+          <p>
+            Secure high-yielding plots situated on the fast-progressing 6-lane coastal corridor connecting Visakhapatnam to Bhogapuram International Airport. Ground values have registered steady 24% annual growth.
+          </p>
+          <div class="spotlight-highlights">
+            <div class="highlight-pill">
+              <span>Average Growth</span>
+              <strong>+24% YoY</strong>
+            </div>
+            <div class="highlight-pill">
+              <span>Drive to Airport</span>
+              <strong>15 Minutes</strong>
+            </div>
+            <div class="highlight-pill">
+              <span>Clearance</span>
+              <strong>VMRDA Final</strong>
+            </div>
+          </div>
+          <div class="spotlight-actions">
+            <a href="https://wa.me/919959427831?text=Hello%20Shree%20Dharani%20Estates,%20I%20am%20interested%20in%20Bhogapuram%20Airport%20corridor%20plots." target="_blank" rel="noopener noreferrer" class="btn-luxury">
+              Request Corridor Brochure
+            </a>
+            <a href="tel:+919959427831" class="btn-outline-gold">Talk to Land Advisor</a>
+          </div>
+        </div>
+
+        <div class="spotlight-call-box">
+          <h3>Personalized Site Visit</h3>
+          <p style="color: #cad5d0; font-size: 0.9rem; margin-bottom: 16px;">
+            Book a complimentary chauffeured site visit with our senior property consultants this weekend.
+          </p>
+          <span class="spotlight-phone">+91 99594 27831</span>
+          <a href="#inquirySection" class="btn-luxury" style="width: 100%; justify-content: center;">Book Your Visit Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. INQUIRY & CONTACT SECTION
+         ========================================================================= -->
+    <section class="contact-section" id="inquirySection">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Information Card -->
+          <div class="contact-info-card">
+            <span class="section-tag" style="background: rgba(212,175,55,0.2); color: var(--gold-light);">Get In Touch</span>
+            <h3>We're Here to Guide Your Investment Journey</h3>
+            <p>
+              Whether you are looking to build your dream home or make a smart wealth-generating land investment, our dedicated advisors provide full transparency and legal documentation assistance.
+            </p>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <span>Direct Hotline</span>
+                <strong><a href="tel:+919959427831">+91 99594 27831</a></strong>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <span>Official Email</span>
+                <strong><a href="mailto:contact@shreedharaniestates.com">contact@shreedharaniestates.com</a></strong>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <span>Regional Offices</span>
+                <strong>Visakhapatnam &bull; Vijayawada &bull; Hyderabad</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Lead Form -->
+          <div class="inquiry-form-card">
+            <h3>Request Express Callback</h3>
+            <p>Fill out this form and our investment specialist will reach out within 15 minutes.</p>
+
+            <form id="quickInquiryForm">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="inqName">Your Full Name *</label>
+                  <input type="text" id="inqName" class="form-input" placeholder="e.g. Rajesh Kumar" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="inqPhone">Mobile Number (WhatsApp) *</label>
+                  <input type="tel" id="inqPhone" class="form-input" placeholder="+91 98765 43210" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="inqInterest">Interested Property</label>
+                  <select id="inqInterest" class="form-select">
+                    <option value="Dharani Green Enclave (Open Plots)">Dharani Green Enclave (Open Plots)</option>
+                    <option value="Shree Heights (Luxury Apartments)">Shree Heights (Luxury Apartments)</option>
+                    <option value="Dharani Commercial Plaza">Dharani Commercial Plaza</option>
+                    <option value="Dharani Palm County (Plots)">Dharani Palm County (Plots)</option>
+                    <option value="Shree Dharani Royal Palms (Villas)">Shree Dharani Royal Palms (Villas)</option>
+                    <option value="Dharani Aeropolis (Airport Zone)">Dharani Aeropolis (Airport Zone)</option>
+                    <option value="General Consultation">General Consultation</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="inqLocation">Preferred City</label>
+                  <select id="inqLocation" class="form-select">
+                    <option value="Visakhapatnam">Visakhapatnam</option>
+                    <option value="Vijayawada">Vijayawada</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                  </select>
+                </div>
+
+                <div class="form-field form-group-full">
+                  <label for="inqMessage">Notes or Specific Requirements (Optional)</label>
+                  <textarea id="inqMessage" class="form-textarea" placeholder="Budget, expected plot size, preferred facing (East/North), or timeline for construction..."></textarea>
+                </div>
+
+                <div class="form-group-full">
+                  <button type="submit" class="form-submit-btn" id="btnSubmitLead">
+                    <span>Submit & Connect on WhatsApp</span>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.35.49 1.199.533 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/>
+                    </svg>
+                  </button>
+                  <p class="form-hint">🔒 We respect your privacy. No spam. Instant direct advisory assistance.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       8. PROPERTY DETAILS INTERACTIVE MODAL (With Photo Gallery & Specs)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="propertyModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closePropertyModal()" aria-label="Close details modal">&times;</button>
+      
+      <!-- Modal Gallery Section -->
+      <div class="modal-gallery">
+        <img src="" alt="Property Highlight" id="modalMainImage" class="modal-main-image">
+        <div class="modal-gallery-thumbs" id="modalGalleryThumbs">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="modal-body">
+        <div class="modal-header-info">
+          <div class="modal-title-box">
+            <h2 id="modalTitle">Property Title</h2>
+            <div class="modal-location">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="color: var(--gold);">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span id="modalLocation">Location, City</span>
+            </div>
+          </div>
+
+          <div class="modal-price-box">
+            <span>Price Range</span>
+            <h3 id="modalPrice">₹00 Lakhs</h3>
+          </div>
+        </div>
+
+        <!-- Specifications Grid -->
+        <div class="modal-specs-grid">
+          <div class="modal-spec-card">
+            <span class="lbl">Category</span>
+            <span class="val" id="modalCategory">PLOTS</span>
+          </div>
+          <div class="modal-spec-card">
+            <span class="lbl">Plot / Built Area</span>
+            <span class="val" id="modalArea">167 - 400 Sq. Yds</span>
+          </div>
+          <div class="modal-spec-card">
+            <span class="lbl">Facing Options</span>
+            <span class="val" id="modalFacing">East & North</span>
+          </div>
+          <div class="modal-spec-card">
+            <span class="lbl">Authority Approval</span>
+            <span class="val" id="modalApproval">VMRDA / RERA</span>
+          </div>
+        </div>
+
+        <!-- Detailed Description -->
+        <h4 class="modal-desc-heading">About This Development</h4>
+        <p class="modal-desc-text" id="modalDescription"></p>
+
+        <!-- Key Project Highlights -->
+        <h4 class="modal-desc-heading">Key Infrastructure & Highlights</h4>
+        <ul class="modal-features-list" id="modalHighlights">
+          <!-- Populated by app.js -->
+        </ul>
+
+        <!-- Modal Actions Footer -->
+        <div class="modal-actions">
+          <button class="btn-outline-gold" style="color: var(--primary); border-color: var(--primary);" onclick="closePropertyModal()">Close Preview</button>
+          <a href="#" id="modalWhatsAppBtn" target="_blank" rel="noopener noreferrer" class="btn-luxury">
+            <span>Inquire on WhatsApp</span>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.35.49 1.199.533 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       9. FLOATING WHATSAPP BUTTON & QUICK CHAT POPUP
+       ========================================================================= -->
+  <div class="floating-whatsapp-container">
+    <!-- Chat Card Bubble -->
+    <div class="whatsapp-popup" id="whatsappPopup">
+      <div class="whatsapp-popup-header">
+        <div class="popup-header-info">
+          <div class="popup-avatar">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="popup-name">Shree Dharani Helpdesk</div>
+            <div class="popup-status">Online • Typically replies in 2 mins</div>
+          </div>
+        </div>
+        <button class="popup-close" id="whatsappPopupClose" aria-label="Close Chat Window">&times;</button>
       </div>
 
       <div class="whatsapp-popup-body">
-        <div class="chat-bubble left">
-          Hello! 👋 Welcome to <strong>Shree Dharani Estates</strong>. Looking for premium open plots, luxury villas, or high-return investments in Vizag, Vijayawada, or Hyderabad?
+        <div class="chat-bubble">
+          Hello! 👋 Welcome to <strong>Shree Dharani Estates</strong>. Are you looking for open plots, luxury gated community villas, or high-return investments in Vizag, Vijayawada, or Hyderabad?
+          <span class="chat-timestamp">Just now</span>
         </div>
-        <div class="chat-bubble left">
-          How can our advisory team assist you today?
+        <div class="chat-bubble">
+          Tap below to chat with our property advisor directly on WhatsApp!
+          <span class="chat-timestamp">Just now</span>
         </div>
-      </div>
-
-      <div class="whatsapp-popup-footer">
-        <a href="https://wa.me/919959427831?text=Hello%20Shree%20Dharani%20Estates,%20I%20have%20an%20inquiry%20regarding%20your%20properties." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-send">
+        <a href="https://wa.me/919959427831?text=Hello%20Shree%20Dharani%20Estates,%20I%20have%20an%20inquiry%20regarding%20your%20properties." target="_blank" rel="noopener noreferrer" class="whatsapp-direct-btn">
           <span>Start WhatsApp Chat</span>
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.35.49 1.199.533 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/>
@@ -25,76 +545,122 @@
       </div>
     </div>
 
-    <!-- Floating Trigger Icon Button -->
-    <button class="whatsapp-trigger-btn" id="whatsappTriggerBtn" aria-label="Open WhatsApp Chat">
-      <svg class="wa-icon" fill="currentColor" viewBox="0 0 24 24">
+    <!-- Floating Round Button -->
+    <button class="whatsapp-fab-btn" id="whatsappFabBtn" aria-label="Open WhatsApp Chat Support">
+      <svg fill="currentColor" viewBox="0 0 24 24">
         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.35.49 1.199.533 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/>
       </svg>
-      <span class="notification-badge">1</span>
+      <span class="whatsapp-tooltip">Chat with Advisor</span>
     </button>
   </div>
 
   <!-- =========================================================================
-       10. FOOTER SECTION
+       10. FOOTER & LEGAL
        ========================================================================= -->
   <footer class="main-footer">
-    <div class="container footer-container">
-      <div class="footer-col brand-col">
-        <a href="#" class="brand-logo footer-logo">
-          <div class="logo-symbol">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
+    <div class="container">
+      <!-- Footer Top Disclaimer -->
+      <div class="dev-disclaimer-card">
+        <div class="disclaimer-icon">✦</div>
+        <div class="disclaimer-text">
+          <strong>Notice:</strong> All project layouts, plans, images, and dimensions shown on this portal preview are illustrative representations for <strong>Shree Dharani Estates</strong> ventures. Statutory clearances (VMRDA, CRDA, HMDA, RERA) are available for verification at our sales offices.
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div class="footer-col-brand">
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <span class="footer-brand-title">Shree Dharani Estates</span>
+            </div>
           </div>
-          <div class="logo-text-group">
-            <span class="logo-main-title">Shree Dharani</span>
-            <span class="logo-sub-title">Estates &bull; Luxury Living</span>
+          <p>
+            Delivering excellence, transparent documentation, and landmark residential and commercial developments across Visakhapatnam, Vijayawada, and Hyderabad for over 15 years.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/919959427831" class="social-icon-link" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.35.49 1.199.533 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/></svg>
+            </a>
           </div>
-        </a>
-        <p class="footer-desc">
-          Building trust and delivering high-value real estate ventures across Andhra Pradesh & Telangana with 100% clear titles and statutory approvals.
-        </p>
+        </div>
+
+        <!-- Quick Links Col -->
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home Showcase</a></li>
+            <li><a href="#listings">Featured Properties</a></li>
+            <li><a href="#whyUs">Why Shree Dharani</a></li>
+            <li><a href="#spotlight">Growth Corridors</a></li>
+            <li><a href="#inquirySection">Schedule Site Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Property Types Col -->
+        <div>
+          <h4 class="footer-heading">Portfolios</h4>
+          <ul class="footer-links-list">
+            <li><a href="#listings">VMRDA Open Plots</a></li>
+            <li><a href="#listings">CRDA Approved Layouts</a></li>
+            <li><a href="#listings">HMDA Triplex Villas</a></li>
+            <li><a href="#listings">Commercial Showrooms</a></li>
+            <li><a href="#listings">Airport Corridor Land</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Col -->
+        <div>
+          <h4 class="footer-heading">Corporate Office</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-row">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>MVP Colony / Madhurawada IT Corridor, Visakhapatnam, AP, India</span>
+            </div>
+            <div class="footer-contact-row">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span><a href="tel:+919959427831">+91 99594 27831</a></span>
+            </div>
+            <div class="footer-contact-row">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span><a href="mailto:contact@shreedharaniestates.com">contact@shreedharaniestates.com</a></span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#listings">Featured Properties</a></li>
-          <li><a href="#whyUs">Why Choose Us</a></li>
-          <li><a href="#spotlight">Prime Corridors</a></li>
-          <li><a href="#inquirySection">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Property Types</h4>
-        <ul class="footer-links">
-          <li><a href="#listings">Open Plot Layouts</a></li>
-          <li><a href="#listings">Gated Community Villas</a></li>
-          <li><a href="#listings">Executive Apartments</a></li>
-          <li><a href="#listings">Commercial Plots</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact Info</h4>
-        <p><strong>Phone:</strong> <a href="tel:+919959427831" style="color: inherit;">+91 9959427831</a></p>
-        <p><strong>Email:</strong> contact@shreedharaniestates.com</p>
-        <p><strong>Head Office:</strong> Visakhapatnam, Andhra Pradesh, India</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p>&copy; 2026 Shree Dharani Estates. All Rights Reserved.</p>
-        <p>Designed for Luxury Real Estate Experience.</p>
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Shree Dharani Estates</strong>. All Rights Reserved. Clear Titles, Certified Quality.
+        </div>
+        <div>
+          Direct Support: <a href="https://wa.me/919959427831" target="_blank" rel="noopener noreferrer">+91 9959427831 (WhatsApp)</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Main Application Script -->
   <script src="app.js"></script>
 </body>
 </html>
