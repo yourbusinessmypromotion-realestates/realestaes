@@ -1,0 +1,8 @@
+{
+  "name": "shreedharaniestates",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  }
+}
