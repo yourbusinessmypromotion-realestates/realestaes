@@ -1,0 +1,58 @@
+# Operating System Files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows AppData & User Profiles (in case repo was initiated in user root)
+[Aa]pp[Dd]ata/
+Local Settings/
+NTUSER.DAT*
+ntuser.dat*
+
+# Node / Package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Build and Temp outputs
+dist/
+build/
+out/
+tmp/
+temp/
+*.tmp
+*.temp
+*.log
+
+# Installers and Archives
+*.exe
+*.msi
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# IDEs and Editors
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
